@@ -7,7 +7,6 @@ import { kryptMint, ScroogeCoinMint, token_swap_state_account, swap_authority, p
 import { TOKEN_PROGRAM_ID } from '@solana/spl-token'
 import { DepositAllSchema } from '../models/Data'
 import { TOKEN_SWAP_PROGRAM_ID } from './const'
-import * as Layout from '../utils/layout'
 
 export const DepositSingleTokenType: FC = (props: {
     onInputChange?: (val: number) => void;
@@ -29,40 +28,13 @@ export const DepositSingleTokenType: FC = (props: {
             alert('Please connect your wallet!')
             return
         }
-        const sourceA = await getATA(kryptMint, publicKey)
-        const sourceB = await getATA(ScroogeCoinMint, publicKey)
+        /* 
 
-        const buffer =  deposit.serialize()
 
-        const transaction = new Web3.Transaction()
-        
-        const depositIX = new Web3.TransactionInstruction({
-        keys: [
-            { pubkey: token_swap_state_account, isSigner: false, isWritable: false },
-            { pubkey: swap_authority, isSigner: false, isWritable: false },
-            { pubkey: publicKey, isSigner: true, isWritable: false },
-            { pubkey: sourceA, isSigner: false, isWritable: true },
-            { pubkey: sourceB, isSigner: false, isWritable: true },
-            { pubkey: pool_krypt_account, isSigner: false, isWritable: true },
-            { pubkey: pool_scrooge_account, isSigner: false, isWritable: true },
-            { pubkey: pool_mint, isSigner: false, isWritable: true },
-            { pubkey: token_account_pool, isSigner: false, isWritable: true },
-            { pubkey: TOKEN_PROGRAM_ID, isSigner: false, isWritable: false },
-          ],
-          data: buffer,
-          programId: TOKEN_SWAP_PROGRAM_ID,
-        })
-    
-        transaction.add(depositIX)
+            build deposit transaction here
 
-        try {
-            let txid = await sendTransaction(transaction, connection)
-            alert(`Transaction submitted: https://explorer.solana.com/tx/${txid}?cluster=devnet`)
-            console.log(`Transaction submitted: https://explorer.solana.com/tx/${txid}?cluster=devnet`)
-        } catch (e) {
-            console.log(JSON.stringify(e))
-            alert(JSON.stringify(e))
-        }
+
+        */
 
     }
 
