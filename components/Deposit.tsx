@@ -29,48 +29,12 @@ export const DepositSingleTokenType: FC = (props: {
             alert('Please connect your wallet!')
             return
         }
-        const sourceA = await getATA(kryptMint, publicKey)
-        const sourceB = await getATA(ScroogeCoinMint, publicKey)
-        const token_account_pool = await getATA(pool_mint, publicKey)
 
-        const transaction = new Web3.Transaction()
+        /*
 
-        let account = await connection.getAccountInfo(token_account_pool)
-  
-        if (account == null) {
-          const createATAIX = await createATA(pool_mint, token_account_pool, publicKey)
-          transaction.add(createATAIX)
-        }
+        Deposit instruciton here
 
-        const buffer =  deposit.serialize()
-        
-        const depositIX = new Web3.TransactionInstruction({
-        keys: [
-            { pubkey: token_swap_state_account, isSigner: false, isWritable: false },
-            { pubkey: swap_authority, isSigner: false, isWritable: false },
-            { pubkey: publicKey, isSigner: true, isWritable: false },
-            { pubkey: sourceA, isSigner: false, isWritable: true },
-            { pubkey: sourceB, isSigner: false, isWritable: true },
-            { pubkey: pool_krypt_account, isSigner: false, isWritable: true },
-            { pubkey: pool_scrooge_account, isSigner: false, isWritable: true },
-            { pubkey: pool_mint, isSigner: false, isWritable: true },
-            { pubkey: token_account_pool, isSigner: false, isWritable: true },
-            { pubkey: TOKEN_PROGRAM_ID, isSigner: false, isWritable: false },
-          ],
-          data: buffer,
-          programId: TOKEN_SWAP_PROGRAM_ID,
-        })
-    
-        transaction.add(depositIX)
-
-        try {
-            let txid = await sendTransaction(transaction, connection)
-            alert(`Transaction submitted: https://explorer.solana.com/tx/${txid}?cluster=devnet`)
-            console.log(`Transaction submitted: https://explorer.solana.com/tx/${txid}?cluster=devnet`)
-        } catch (e) {
-            console.log(JSON.stringify(e))
-            alert(JSON.stringify(e))
-        }
+        */
 
     }
 

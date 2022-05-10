@@ -25,42 +25,12 @@ export const WithdrawSingleTokenType: FC = () => {
             alert('Please connect your wallet!')
             return
         }
-        const transaction = new Web3.Transaction()
+        /*
 
-        const userA = await getATA(kryptMint, publicKey)
-        const userB = await getATA(ScroogeCoinMint, publicKey)
-        const token_account_pool = await getATA(pool_mint, publicKey)
+          withdrawal instruction here
 
-        const buffer = withdraw.serialize()
 
-        const withdrawIX = new Web3.TransactionInstruction({
-            keys: [
-                {pubkey: token_swap_state_account, isSigner: false, isWritable: false},
-                {pubkey: swap_authority, isSigner: false, isWritable: false},
-                {pubkey: publicKey, isSigner: true, isWritable: false},
-                {pubkey: pool_mint, isSigner: false, isWritable: true},
-                {pubkey: token_account_pool, isSigner: false, isWritable: true},
-                {pubkey: pool_krypt_account, isSigner: false, isWritable: true},
-                {pubkey: pool_scrooge_account, isSigner: false, isWritable: true},
-                {pubkey: userA, isSigner: false, isWritable: true},
-                {pubkey: userB, isSigner: false, isWritable: true},
-                {pubkey: fee_account, isSigner: false, isWritable: true},
-                {pubkey: TOKEN_PROGRAM_ID, isSigner: false, isWritable: false},
-              ],
-              data: buffer,
-              programId: TOKEN_SWAP_PROGRAM_ID,
-        })
-
-        transaction.add(withdrawIX)
-
-        try {
-            let txid = await sendTransaction(transaction, connection)
-            alert(`Transaction submitted: https://explorer.solana.com/tx/${txid}?cluster=devnet`)
-            console.log(`Transaction submitted: https://explorer.solana.com/tx/${txid}?cluster=devnet`)
-        } catch (e) {
-            console.log(JSON.stringify(e))
-            alert(JSON.stringify(e))
-        }
+        */
     }
 
     return (

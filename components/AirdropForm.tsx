@@ -24,60 +24,12 @@ export const Airdrop: FC = () => {
             alert('Please connect your wallet!')
             return
         }
-        const transaction = new Web3.Transaction()
+        /*
 
-        const userATA = await getATA(kryptMint, publicKey)
-        let account = await connection.getAccountInfo(userATA)
-  
-        if (account == null) {
-          const createATAIX = await createATA(kryptMint, userATA, publicKey)
-          transaction.add(createATAIX)
-        }
+          airdrop instruction here
 
-        const buffer = airdrop.serialize()
-    
-        const airdropIX = new Web3.TransactionInstruction({
-            keys: [
-              {
-                pubkey: publicKey,
-                isSigner: true,
-                isWritable: true,
-              },
-              {
-                pubkey: userATA,
-                isSigner: false,
-                isWritable: true,
-              },
-              {
-                pubkey: kryptMint,
-                isSigner: false,
-                isWritable: true,
-              },
-              {
-                pubkey: airdropPDA,
-                isSigner: false,
-                isWritable: false,
-              },
-              {
-                pubkey: TOKEN_PROGRAM_ID,
-                isSigner: false,
-                isWritable: false,
-              }
-            ],
-            data: buffer,
-            programId: airdropProgramId,
-          })
 
-        transaction.add(airdropIX)
-
-        try {
-            let txid = await sendTransaction(transaction, connection)
-            alert(`Transaction submitted: https://explorer.solana.com/tx/${txid}?cluster=devnet`)
-            console.log(`Transaction submitted: https://explorer.solana.com/tx/${txid}?cluster=devnet`)
-        } catch (e) {
-            console.log(JSON.stringify(e))
-            alert(JSON.stringify(e))
-        }
+        */
 
     }
 
