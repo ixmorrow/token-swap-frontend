@@ -27,7 +27,7 @@ export const WithdrawSingleTokenType: FC = () => {
         }
         /*
 
-          withdrawal instruction here
+            build withdrawal transaction here
 
 
         */

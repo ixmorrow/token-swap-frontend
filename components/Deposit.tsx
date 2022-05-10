@@ -7,7 +7,6 @@ import { kryptMint, ScroogeCoinMint, token_swap_state_account, swap_authority, p
 import { TOKEN_PROGRAM_ID } from '@solana/spl-token'
 import { DepositAllSchema } from '../models/Data'
 import { TOKEN_SWAP_PROGRAM_ID } from './const'
-import * as Layout from '../utils/layout'
 
 export const DepositSingleTokenType: FC = (props: {
     onInputChange?: (val: number) => void;
@@ -29,10 +28,11 @@ export const DepositSingleTokenType: FC = (props: {
             alert('Please connect your wallet!')
             return
         }
+        /* 
 
-        /*
 
-        Deposit instruciton here
+            build deposit transaction here
+
 
         */
 
